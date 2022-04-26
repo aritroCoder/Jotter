@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet,Linking, Pressable, ScrollView } from 'react-native';
+import { View, Text, StyleSheet,Linking } from 'react-native';
 import Button from '../utils/Button';
 
 const About = ({ navigation }) => {
@@ -9,7 +9,7 @@ const About = ({ navigation }) => {
             <Text style={styles.text}>Click the '+' button in home page to create a note.</Text>
             <Text style={styles.text}>To edit an existing note, click the note from home page.</Text>
             <View style={styles.btnholder}>
-                <Button onPress={()=>Linking.openURL('https://github.com/aritroCoder')} color='#069A8E' text='Report an issue' delete='' />
+                <Button onPress={()=>Linking.openURL('https://github.com/aritroCoder/Jotter')} color='#FFD369' text='Report an issue' delete='' />
             </View>
         </View>
     )

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    View,
     Text,
     StyleSheet,
 } from 'react-native';
@@ -8,7 +7,7 @@ import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 
 const Plusbtn = (props) => {
     return (
-        <Pressable onPress={()=>props.callback.replace('noteEditor')} android_ripple={{ color: '#A64B2A' }} style={{ ...styles.plus, top: props.Yoffset }}>
+        <Pressable onPress={()=>props.callback.replace('noteEditor')} android_ripple={{ color: '#A64B2A' }} style={{ ...styles.plus, top: '80%' }}>
             <Text style={styles.text}>+</Text>
         </Pressable>
     )
@@ -20,7 +19,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         textAlign: 'center',
         textAlignVertical: 'center',
-        backgroundColor: '#FCD900',
+        backgroundColor: '#FFD369',
         height: 50,
         width: 50,
         borderRadius: 25,

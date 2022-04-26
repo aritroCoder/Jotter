@@ -7,7 +7,7 @@ import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 
 const Quesbtn = (props) => {
     return (
-        <Pressable onPress={()=>props.callback.navigate('about')} android_ripple={{ color: '#A64B2A' }} style={{ ...styles.plus, top: props.Yoffset }}>
+        <Pressable onPress={()=>props.callback.navigate('about')} android_ripple={{ color: '#A64B2A' }} style={{ ...styles.plus, top: '89%' }}>
             <Text style={styles.text}>?</Text>
         </Pressable>
     )
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         textAlign: 'center',
         textAlignVertical: 'center',
-        backgroundColor: '#FCD900',
+        backgroundColor: '#FFD369',
         height: 50,
         width: 50,
         borderRadius: 25,

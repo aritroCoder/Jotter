@@ -1,12 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import SQLite from 'react-native-sqlite-storage';
 
 import Note from '../components/Note';
 import Plusbtn from '../utils/Plusbtn';
 import Quesbtn from '../utils/Quesbtn';
 
-const Y_offset_plus = 520;
 
 //create and open the database
 const db = SQLite.openDatabase({
@@ -20,7 +19,6 @@ const db = SQLite.openDatabase({
 )
 
 function Home({ navigation }) {
-    const [plus_btn_posY, setPlus_btn_posY] = React.useState(0);
     const [note_no, setNote_no] = React.useState(0);
     const [notes, setNotes] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
@@ -55,7 +53,6 @@ function Home({ navigation }) {
 
     React.useEffect(() => {
         getNotes();
-        setPlus_btn_posY(Y_offset_plus);
     }, [])
 
     React.useEffect(() => {
@@ -65,7 +62,7 @@ function Home({ navigation }) {
 
     return (
         <>
-            <ScrollView style={{flex: 1, backgroundColor:'#E9EFC0' }} >
+            <ScrollView style={{flex: 1, backgroundColor:'#fff' }} >
                 <View style={styles.body}>
                     {!loading && notes.map((note, i) => (
                         <Note key={note.id} id={note.id} callback={navigation} title={note.title} description={note.desc} day={note.day} month={note.month} year={note.year} />
@@ -75,8 +72,8 @@ function Home({ navigation }) {
                     )}
                 </View>
             </ScrollView>
-            <Plusbtn callback={navigation} Yoffset={plus_btn_posY} />
-            <Quesbtn callback={navigation} Yoffset={plus_btn_posY+60}/>
+            <Plusbtn callback={navigation} />
+            <Quesbtn callback={navigation} />
         </>
     )
 }
@@ -87,7 +84,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-evenly',
-        backgroundColor: '#E9EFC0',
+        backgroundColor: '#fff',
         // height: 850,
     },
     placeholder: {

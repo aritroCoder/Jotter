@@ -14,23 +14,23 @@ function App() {
         <Stack.Screen name="Home" component={Home} options={{
           title: 'YOUR NOTES',
           headerStyle:{
-            backgroundColor: '#4E944F',
+            backgroundColor: '#393E46',
           },
           headerTintColor: '#fff'
         }}/>
         <Stack.Screen name="noteEditor" component={NoteEditor} options={{
           title: 'Note - Editor',
           headerStyle:{
-            backgroundColor: '#83BD75',
+            backgroundColor: '#222831',
           },
           headerTintColor: '#fff'
         }}/>
         <Stack.Screen name="about" component={About} options={{
           title: 'About and Guide',
           headerStyle:{
-            backgroundColor: '#446A46',
+            backgroundColor: '#EEEEEE',
           },
-          headerTintColor: '#fff'
+          headerTintColor: '#393E46'
         }}/>
       </Stack.Navigator>
     </NavigationContainer>
